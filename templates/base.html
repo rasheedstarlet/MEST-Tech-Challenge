@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}House Buying Website {% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'base/home/home.css' %}">
+</head>
+<body>
+
+<header>
+	<div class="container">
+		<div id="branding">
+			<a href="{% url 'home:home' %}" ><img class="logo" src="{% static 'assets/logo.png' %}"></a>
+		</div>
+		<nav>
+			<ul>
+				<li><a href="contact.html"> Cart </a></li>
+			</ul>
+		</nav>
+	</div>
+</header>
+
+<content>
+		<nav>
+			<ul>
+
+				<li><a href="{% url 'home:home' %}"> HOME </a></li>
+        <li><a href="{% url 'home:for_rent' %}"> FOR RENT </a></li>
+				<li><a href="{% url 'home:for_sale' %}"> FOR SALE </a></li>
+        <li><a href="{% url 'home:contact' %}"> CONTACT </a></li>
+				<li><a href="{% url 'home:favourites' %}"> FAVOURITE </a></li>
+
+			</ul>
+		</nav>
+	</content>
+
+{% block content %}
+
+{% endblock %}
+
+{% block footer %}
+
+		<footer>
+		<div class="footer">
+		  <div class="row1">
+		    <h3> CATEGORIES </h3>
+		    <ul class="info">
+		      <li>Lorem ipsum dolor</li>
+		      <li>Lorem ipsum dolor</li>
+		      <li>Lorem ipsum dolor</li>
+		      <li>Lorem ipsum dolor</li>
+		      <li>Lorem ipsum dolor</li>
+		      <li>Lorem ipsum dolor</li>
+		    </ul>
+		  </div>
+		  <div class="row2">
+		    <h3> COMPANY </h3>
+		    <ul class="info">
+		      <li>Lorem ipsum dolor</li>
+		      <li>Lorem ipsum dolor</li>
+		      <li>Lorem ipsum dolor</li>
+		      <li>Lorem ipsum dolor</li>
+		      <li>Lorem ipsum dolor</li>
+		      <li>Lorem ipsum dolor</li>
+		    </ul>
+		  </div>
+		  <div class="row3">
+		    <h3>SOCIAL MEDIA</h3>
+		      <ul class="info">
+		        <li>Lorem ipsum dolor</li>
+		        <li>Lorem ipsum dolor</li>
+		        <li>Lorem ipsum dolor</li>
+		        <li>Lorem ipsum dolor</li>
+		        <li>Lorem ipsum dolor</li>
+		        <li>Lorem ipsum dolor</li>
+		      </ul>
+		  </div>
+		  <div class="row4">
+		    <h3>CONTACT</h3>
+		    <ul class="info">
+		      <li>Lorem ipsum dolor</li>
+		      <li>Lorem ipsum dolor</li>
+		      <li>Lorem ipsum dolor</li>
+		      <li>Lorem ipsum dolor</li>
+		      <li>Lorem ipsum dolor</li>
+		      <li>Lorem ipsum dolor</li>
+		    </ul>
+		  </div>
+		</div>
+		</footer>
+    
+{% endblock %}
+
+</body>
+</html>

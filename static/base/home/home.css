@@ -1,0 +1,290 @@
+body {
+	font: 15px/1.5 Arial, Helvetica, sans-serif;
+	padding: 0;
+	margin: 0;
+	background-color:  #a5b1c2;
+}
+/*Global*/
+.container {
+	width: 80%;
+	margin: auto;
+	overflow: hidden;
+}
+
+
+/*header part*/
+
+img.logo {
+	height: 70px;
+	width: 260px;
+}
+
+img.partners {
+	height: 70px;
+	width: 200px;
+}
+
+
+header {
+	background: #00d2d3;
+	color: #fb5b11;
+	padding-top: 30px;
+	min-height: 30px;
+}
+
+
+header a {
+	color:  #FFF;
+	text-decoration: none;
+	font-weight: bold;
+	font-size: 24px;
+}
+
+header ul {
+	margin: 0;
+	padding: 0;
+}
+
+header li {
+	float: left;
+	display: inline;
+	padding:20px;
+}
+header #branding {
+	float: left;
+}
+header #branding h1 {
+	margin: 0;
+}
+header nav {
+	float: right;
+	margin-top: 0;
+}
+
+
+#banner {
+	min-height: 400px;
+	/*background: url('banner.jpg') no-repeat 0 -800px;*/
+	background:linear-gradient(63deg, #01a3a4, purple);
+	background:
+	text-align: left;
+	color: white;
+}
+
+
+a {
+	text-decoration: none;
+}
+
+.previous, .next, .see_more {
+  border: 3px solid #00d2d3;
+  background: white;
+  padding: 10px;
+  color:#01a3a4;
+  border-radius: 6px;
+  text-align: center;
+  width: 40%;
+}
+
+.pagination {
+	text-align: center;
+  padding: 50px;
+  background: #a5b1c2;
+}
+
+
+
+nav {
+	float: right;
+	margin: 0;
+}
+
+content nav {
+	width: 100%;
+	background-color: white;
+	float: left;
+	text-align: center;
+}
+content ul li {
+	display: inline-block;
+	line-height: 30px;
+	padding: 10px;
+
+}
+
+content li a:hover {
+	color: white;
+}
+content li:hover {
+	background-color: #10a3a4;
+	color: white;
+}
+
+content a {
+	text-decoration: none;
+	color: #10a3a4;
+	font-weight:bold;
+}
+
+
+
+.main-content {
+	display: flex;
+	grid-template-columns: 100%;
+	width: 80%;
+	margin: auto;
+	position: relative;
+	background-color:white;
+	padding: 20px;
+}
+.wrapper {
+	margin-top: 20px;
+	padding: 20px;
+
+}
+.column {
+	columns: 3;
+}
+.boxes img {
+	width: 100%;
+	height: 100%;
+}
+.boxes li {
+	color: purple;
+}
+.boxes {
+	min-width: 100%;
+}
+.column {
+	padding: 20px;
+}
+
+li {
+	list-style: none;
+}
+
+.houses li, h4{
+	list-style: none;
+	margin-bottom: 20px;
+	padding-left: 5px;
+	text-align: center;
+
+
+}
+.houses {
+
+	width: 100%;
+	border: 2px solid purple;
+
+	border-radius: 6px;
+}
+.details {
+	margin: 10px;
+}
+
+
+
+
+/*================================================
+START OF SECTION STYLING
+===============================================*/
+
+.ptnr {
+	color: #00d2d3;
+	font-weight: bold;
+	width: auto;
+}
+
+.section {
+	background: linear-gradient(63deg, #01a3a4, #00d2d3);
+	text-align: center;
+	padding: 30px;
+	color:white;
+	font-family: lato, sans-serif;
+	width: auto;
+
+}
+
+.section-items {
+	/*display: flex;*/
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: flex-start;
+	padding: 10px;
+	margin: 20px auto;
+}
+
+ .section_items_header {
+ 	text-transform: uppercase;
+ 	margin: 10px;
+ }
+
+ .section-items div {
+ 	margin: 0 50px 0 50px;
+ }
+
+/*================================================
+END OF  SECTION STYLING
+===============================================*/
+
+
+/*================================================
+START OF STYLING OF div.container
+===============================================*/
+
+.container_info {
+	min-height: 300px;
+	text-align: center; /* this centers the content of the div inside it*/
+	background: white;
+}
+
+div.we {
+	display: inline-block;
+	font-size: 22px;
+	color:  black;
+	font-family:;
+}
+
+span.are {
+	color: #01a3a4;
+	border-bottom: 5px solid #00d2d3;
+}
+
+/*================================================
+END OF STYLING OF div.container
+===============================================*/
+
+
+
+footer {
+	width: 100%;
+}
+.footer {
+	width: 100%;
+	background-color: #01a3a4;
+	display: grid;
+	grid-template-columns: 20% 20% 20% 20%;
+	column-gap: 10px;
+	margin: auto;
+}
+.footer h3 {
+	padding: 10px;
+	text-align: center;
+	text-transform: uppercase;
+	color: white;
+}
+.footer .info {
+	padding: 10px;
+}
+.footer .info li{
+	color: #fff;
+	text-align: center;
+	padding: 7px;
+}
+.row li, h3 {
+	font-size: 14px;
+}
+.info li {
+	font-size: 14px;
+}

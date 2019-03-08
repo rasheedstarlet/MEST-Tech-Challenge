@@ -1,0 +1,85 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% load static%}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'base/home/housedetails.css' %}">
+
+<div class="wrapper">
+		<div class="main">
+			<div class="hotel">
+				<div class="heading">
+					<h3>{{ house.amount }}</h3>
+				</div>
+				<div class="box">
+					<img src="{{ house.picture.url }}" alt = "Picture of a house">
+				</div>
+				<div class="details">
+					<h2> DESCRIPTION </h2>
+            <p>{{ house.description }}</p>
+				</div>
+			</div>
+			<div class="more">
+				<h2> CONTACT </h2>
+				<li> SELLER: {{ house.seller }} </li>
+				<li> TITLE: {{ house.name }}</li>
+				<li>DATE: {{ house.created }}</li>
+			</div>
+			<div class="list">
+				<table>
+					<h2> AMENITIES </h2>
+					<tr class="grey">
+						<td >
+							<li><p>{{ house.category }}</p>
+							</li>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<li><p>{{ house.lease_options }}</p></li>
+						</td>
+					</tr>
+					<tr class="grey">
+						<td>
+							<li>  <p>{{ house.garage }}</p></li>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<li><p>{{ house.furnished }}</p></li>
+						</td>
+					</tr>
+					<tr class="grey">
+						<td>
+							<li><p>{{ house.address }}</p></li>
+						</td>
+					</tr>
+          <tr>
+            <td>
+              <li><p>{{ house.reference }}</p></li>
+            </td>
+          </tr>
+				</table>
+			</div>
+		</div>
+		<div class="sidebar">
+			<h3>Contact</h3>
+			<div class="contact">
+			   <button class="call"><a href="05444293033">Call</a></button> <br>
+			   <button class="message"><a href="mailto:yapaala@gmail.com">Message</a></button> <br>
+			   <button class="whatsapp"><a href="mailto:yapaala@gmail.com">Whatsapp</a></button>
+		</div>
+			</div>
+	</div>
+	<div class="main_contact">
+				<div></div>
+			   <button class="call"><a href="05444293033">Call</a></button> <br>
+			   <button class="message"><a href="mailto:yapaala@gmail.com">Message</a></button> <br>
+			   <button class="whatsapp"><a href="mailto:yapaala@gmail.com">Whatsapp</a></button>
+		</div>
+	<div class="empty">
+
+	</div>
+
+{% endblock %}

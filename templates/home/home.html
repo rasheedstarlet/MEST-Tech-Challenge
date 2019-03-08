@@ -1,0 +1,109 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+<section id="banner">
+
+</section>
+
+<div class="full_page"
+		<div class="wrapper">
+			<div class="main-content">
+				<div class="column">
+		{% for item in object_list %}
+					<div class="boxes">
+						<img src="{{ item.picture.url }}">
+						<div class="details_link">
+		          <p> {{ item.name }}</p>
+		          <hr/>
+		          <p><b> {{ item.description | truncatewords:50}} </b></p>
+		          <div class="see_more">
+		            <a href="{% url 'home:details' item.pk %}"> See More </a>
+		          </div>
+						</div>
+					</div>
+		{% endfor %}
+				</div>
+
+			</div>
+		</div>
+
+
+		<div class="pagination">
+
+		  {% if is_paginated %}
+		    <span>
+
+		      {% if page_obj.has_previous %}
+		        <a class="previous" href="{% url 'home:home' %}?page={{ page_obj.previous_page_number }}"> Previous </a>
+		      {% endif %}
+
+		      <span class="current_page_num" > Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}</span>
+
+		      {% if page_obj.has_next %}
+		      <a class="next" href="{% url 'home:home' %}?page={{ page_obj.next_page_number }}"> Next </a>
+		      {% endif %}
+
+		    </span>
+
+		  {% endif %}
+
+		</div>
+
+
+		<!--
+		==========================
+		=======================
+		 PARTNERS
+		======================
+		===================== -->
+
+		<h1> <span class="ptnr">PARTNER</span>SHIP</h1>
+
+		<section class="section">
+			<div class="section-items">
+
+				<div>
+		      <div id="branding">
+		        <a href="{% url 'home:home' %}" ><img class="partners" src="{% static 'assets/logo.png' %}"></a>
+		      </div>
+					<h1 class="section_items_header">MEST</h1>
+				</div>
+
+					<div>
+		        <div id="branding">
+		          <a href="{% url 'home:home' %}" ><img class="partners" src="{% static 'assets/codeln.png' %}"></a>
+		        </div>
+						<h1 class="section_items_header" >CODELN</h1>
+					</div>
+
+					<div>
+		        <div id="branding">
+		          <a href="{% url 'home:home' %}" ><img class="partners" src="{% static 'assets/logo.png' %}"></a>
+		        </div>
+						<h1 class="section_items_header">YAPAALA</h1>
+					</div>
+			</div>
+		</section>
+
+		<!--
+		==========================
+		=======================
+		  end of PARTNERS markup
+		======================
+		===================== -->
+
+
+
+		<div class="container_info">
+			<div class="we">
+				<h1>WHO WE <span class="are">ARE</span></h1>
+		    <h1> YOUTUBE VIDEO </h1>
+				<p>We are BYARENT. We pride ourselves are the startup building the social network of the future,</p>
+				<p> If you are looking for a beautiful, stunning and fully responsive website, you are at the right place, kenken</p>
+			</div>
+		</div>
+</div>
+
+{% endblock %}

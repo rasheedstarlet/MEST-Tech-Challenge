@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+
+<div class="wrapper">
+	<div class="main-content">
+		<div class="column">
+{% for item in object_list %}
+			<div class="boxes">
+				<img src="{{ item.picture.url }}">
+				<div class="details_link">
+          <p> {{ item.name }}</p>
+          <hr/>
+          <p><b> {{ item.description | truncatewords:50}} </b></p>
+          <div class="see_more">
+            <a href="{% url 'home:details' item.pk %}"> See More </a>
+          </div>
+				</div>
+			</div>
+{% endfor %}
+		</div>
+
+	</div>
+</div>
+
+
+<div class="pagination">
+
+  {% if is_paginated %}
+    <span>
+
+      {% if page_obj.has_previous %}
+        <a class="previous" href="{% url 'home:for_rent' %}?page={{ page_obj.previous_page_number }}"> Previous </a>
+      {% endif %}
+
+      <span class="current_page_num" > Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}</span>
+
+      {% if page_obj.has_next %}
+      <a class="next" href="{% url 'home:for_rent' %}?page={{ page_obj.next_page_number }}"> Next </a>
+      {% endif %}
+
+    </span>
+
+  {% endif %}
+
+</div>
+
+{% endblock %}
