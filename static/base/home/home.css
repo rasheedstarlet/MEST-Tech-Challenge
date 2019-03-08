@@ -64,7 +64,6 @@ header nav {
 
 #banner {
 	min-height: 400px;
-	/*background: url('banner.jpg') no-repeat 0 -800px;*/
 	background:linear-gradient(63deg, #01a3a4, purple);
 	background:
 	text-align: left;
